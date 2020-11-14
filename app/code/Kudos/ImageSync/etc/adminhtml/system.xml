@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="imagesync" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="9" translate="label">
+			<label>Image Sync</label>
+			<tab>general</tab>
+			<resource>Kudos_ImageSync::config_kudos_imagesync</resource>
+			<group id="spreadsheets" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Spreadsheet Configs</label>
+				<field id="spreadsheet_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Drive Spreadsheet ID</label>
+					<comment/>
+				</field>
+				<field id="range" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Range of columns</label>
+					<comment/>
+				</field>
+				<field id="sku_column" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Column Number for SKU</label>
+					<comment/>
+				</field>
+				<field id="image1_column" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Column Number for FIRST IMAGE</label>
+					<comment/>
+				</field>
+				<field id="image2_column" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Column Number for SECOND IMAGE</label>
+					<comment/>
+				</field>
+				<field id="image3_column" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Column Number for THIRD IMAGE</label>
+					<comment/>
+				</field>
+			</group>
+			<group id="googleapicredentials" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>GOOGLE API Credentials</label>
+				<field id="client_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>client_id</label>
+					<comment/>
+				</field>
+				<field id="project_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>project_id</label>
+					<comment/>
+				</field>
+				<field id="client_secret" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>client_secret</label>
+					<comment/>
+				</field>
+			</group>
+			<group id="logsandinfo" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Logs and info config</label>
+				<field id="show_info_logs" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>show_info_logs</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="show_error_logs" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>show_error_logs</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="show_debug_logs" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>show_debug_logs</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="show_progress" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>show_progress</label>
+					<comment>Muestra un punto para cada sku leído de la hoja de cálculo (sólo si SHOW_INFO_LOGS !== 1)</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="show_total_processed" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>show_total_processed</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="show_drive_not_found" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>show_drive_not_found</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="show_total_errors" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>show_total_errors</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="send_report_email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>send_report_email</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="report_email_address" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>report_email_address</label>
+					<comment/>
+				</field>
+				<field id="cron_schedule" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>cron_schedule</label>
+					<comment/>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

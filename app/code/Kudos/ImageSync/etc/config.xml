@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<imagesync>
+			<spreadsheets>
+				<spreadsheet_id>1_TdPwQ_pEw5XBR7GlamReG2JewbbpOoqz0lRWH4G6Hc</spreadsheet_id>
+				<range>A2:Q</range>
+				<sku_column>3</sku_column>
+				<image1_column>14</image1_column>
+				<image2_column>15</image2_column>
+				<image3_column>16</image3_column>
+			</spreadsheets>
+			<googleapicredentials>
+				<client_id/>
+				<project_id/>
+				<client_secret/>
+			</googleapicredentials>
+			<logsandinfo>
+				<show_info_logs/>
+				<show_error_logs/>
+				<show_debug_logs/>
+				<show_progress/>
+				<show_total_processed/>
+				<show_drive_not_found/>
+				<show_total_errors/>
+				<send_report_email/>
+				<report_email_address/>
+				<cron_schedule>0 */4 * * *</cron_schedule>
+			</logsandinfo>
+		</imagesync>
+	</default>
+</config>
