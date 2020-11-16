@@ -11,9 +11,23 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SyncImages extends Command
 {
+    // const NAME_ARGUMENT = "name";
+    // const NAME_OPTION = "option";
+    protected $_syncImages;
+    protected $_state;
 
-    const NAME_ARGUMENT = "name";
-    const NAME_OPTION = "option";
+    /**
+     * @param \Kudos\ImageSync\Cron\SyncImages $syncImages
+     * @param \Magento\Framework\App\State $state
+     */
+    public function __construct(
+        \Kudos\ImageSync\Cron\SyncImages $syncImages,
+        \Magento\Framework\App\State $state
+    ) {
+        $this->_syncImages = $syncImages;
+        $this->_state = $state;
+        parent::__construct();
+    }
 
     /**
      * {@inheritdoc}
@@ -22,10 +36,10 @@ class SyncImages extends Command
         InputInterface $input,
         OutputInterface $output
     ) {
-        $name = $input->getArgument(self::NAME_ARGUMENT);
-        $option = $input->getOption(self::NAME_OPTION);
-        $output->writeln("Hello " . $name);
+        $this->_state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
+        $this->_syncImages->execute();
     }
+
 
     /**
      * {@inheritdoc}
@@ -35,8 +49,8 @@ class SyncImages extends Command
         $this->setName("kudos_imagesync:syncimages");
         $this->setDescription("Force execute sync images process");
         $this->setDefinition([
-            new InputArgument(self::NAME_ARGUMENT, InputArgument::OPTIONAL, "Name"),
-            new InputOption(self::NAME_OPTION, "-a", InputOption::VALUE_NONE, "Option functionality")
+            // new InputArgument(self::NAME_ARGUMENT, InputArgument::OPTIONAL, "Name"),
+            // new InputOption(self::NAME_OPTION, "-a", InputOption::VALUE_NONE, "Option functionality")
         ]);
         parent::configure();
     }

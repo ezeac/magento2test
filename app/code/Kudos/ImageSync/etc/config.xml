@@ -16,13 +16,13 @@
 				<client_secret/>
 			</googleapicredentials>
 			<logsandinfo>
-				<show_info_logs/>
-				<show_error_logs/>
-				<show_debug_logs/>
-				<show_progress/>
-				<show_total_processed/>
-				<show_drive_not_found/>
-				<show_total_errors/>
+				<show_info_logs>1</show_info_logs>
+				<show_error_logs>1</show_error_logs>
+				<show_debug_logs>1</show_debug_logs>
+				<show_progress>0</show_progress>
+				<show_total_processed>1</show_total_processed>
+				<show_drive_not_found>1</show_drive_not_found>
+				<show_total_errors>1</show_total_errors>
 				<send_report_email/>
 				<report_email_address/>
 				<cron_schedule>0 */4 * * *</cron_schedule>

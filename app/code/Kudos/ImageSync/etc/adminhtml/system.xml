@@ -91,6 +91,9 @@
 				</field>
 				<field id="report_email_address" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
 					<label>report_email_address</label>
+					<depends>
+                        <field id="send_report_email">1</field>
+                    </depends>
 					<comment/>
 				</field>
 				<field id="cron_schedule" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
